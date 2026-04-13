@@ -2,128 +2,152 @@
 
 An interactive AI simulation that demonstrates **autonomous navigation using the A* path planning algorithm** with a modern **Streamlit web interface**.
 
-The system allows users to dynamically create obstacles and visualize how an intelligent agent finds the optimal path from start to goal in real time with animation.
-
 ---
 
 ## 📌 Project Overview
 
-This project simulates how autonomous systems (like self-driving cars and warehouse robots) navigate in an environment while avoiding obstacles.
-
-It combines:
-- Artificial Intelligence (Path Planning)
-- A* Algorithm
-- Grid-based simulation
-- Interactive Web UI (Streamlit)
-- Real-time visualization
+This project simulates how autonomous systems navigate in an environment while avoiding obstacles using AI.
 
 ---
 
 ## 🎯 Problem Statement
 
 Autonomous systems must:
-- Find the shortest path
-- Avoid obstacles dynamically
-- Adapt to changing environments
+- Find shortest path  
+- Avoid obstacles  
+- Adapt dynamically  
 
-This project solves these challenges using a grid-based AI simulation.
+This project solves this using A* pathfinding.
 
 ---
 
 ## 🌍 Real-World Applications
 
-- 🚗 Self-driving cars
-- 🤖 Warehouse robots (Amazon)
-- 🚁 Drone navigation
-- 📦 Delivery robots
-- 🏭 Industrial automation
+- Self-driving cars  
+- Warehouse robots  
+- Drone navigation  
+- Delivery robots  
 
 ---
 
 ## ⚙️ Tech Stack
 
-- Python 🐍
-- NumPy
-- Matplotlib
-- Streamlit
-- A* Pathfinding Algorithm
-
----
-
-## 🧠 Algorithm Used
-
-### 🔹 A* (A-Star)
-A* finds the optimal path using:
-- g(n): cost from start
-- h(n): estimated cost to goal
-
-It ensures **efficient and optimal navigation**.
+- Python  
+- NumPy  
+- Matplotlib  
+- Streamlit  
+- A* Algorithm  
 
 ---
 
 ## 🏗️ System Architecture
-User Input (Clickable Grid) ↓ Environment (Grid Matrix) ↓ Obstacle Placement ↓ A* Algorithm ↓ Optimal Path ↓ Animated Navigation
+
+
+User Input (Grid)
+↓
+Obstacle Placement
+↓
+A* Algorithm
+↓
+Path Generation
+↓
+Visualization + Animation
+
 
 ---
 
-## 📁 Project Structure
-AI-Autonomous-Navigation-System/ │
-├── algorithms/ │
-└── astar.py │
-├── src/ │
-├── app.py │
-└── main.py │
-├── outputs/ │
-  └── screenshots/ │   
-      ├── grid.png │     
-      ├── obstacles.png │    
-      └── navigation.png │ 
-├── README.md 
-└── requirements.txt
+## 📁 Project Structure (IMPORTANT)
+
+
+AI-Autonomous-Navigation-System/
+│
+├── algorithms/
+│ └── astar.py # A* algorithm implementation
+│
+├── src/
+│ ├── app.py # Streamlit web app (MAIN FILE)
+│ └── main.py # Optional pygame simulation
+│
+├── outputs/
+│ └── screenshots/ # 📸 ALL IMAGES STORED HERE
+│ ├── grid.png
+│ ├── obstacles.png
+│ └── navigation.png
+│
+├── requirements.txt
+└── README.md
+
 
 ---
+
+## 📸 Outputs
+
+All output images are stored in:
+
+outputs/screenshots/
+
+---
+
+### 🟢 Grid Interface
+
+This shows the initial grid before adding obstacles.
+
+![Grid](outputs/screenshots/grid.png)
+
+---
+
+### ⬛ Obstacles Added
+
+Users can place obstacles dynamically on the grid.
+
+![Obstacles](outputs/screenshots/obstacles.png)
+
+---
+
+### 🔵 Navigation Output
+
+AI finds the optimal path and the agent moves from start to goal.
+
+![Navigation](outputs/screenshots/navigation.png)---
 
 ## 🚀 Installation
 
 ```bash
 git clone https://github.com/your-username/AI-Autonomous-Navigation-System.git
 cd AI-Autonomous-Navigation-System
-Bash
 python -m venv venv
 venv\Scripts\activate
-Bash
 pip install -r requirements.txt
 ▶️ Run the Project
-Bash
 streamlit run src/app.py
+
 🎮 How It Works
 Set grid size
-Click cells to add/remove obstacles
-Click Run Navigation
-AI computes optimal path
-Agent moves from start → goal
+Click cells to add obstacles
+Run navigation
+AI finds path
+Agent moves
 📊 Outputs
-The system demonstrates:
-✔ Grid environment creation
-✔ Dynamic obstacle placement
-✔ Optimal path generation
-✔ Real-time animated navigation
+
+✔ Grid generation
+✔ Obstacle placement
+✔ Path planning
+✔ Real-time animation
+
 📸 Screenshots
 🟢 Grid Interface
-�
+
 ⬛ Obstacles Added
-�
-🔵 Navigation Output (Path + Agent)
-�
+
+🔵 Navigation Output
+
 📈 Future Improvements
-Add BFS & Dijkstra algorithms
+Add BFS / Dijkstra
 Add speed control
-Multi-agent simulation
-Integrate OpenCV
-Upgrade to CARLA simulator
+Multi-agent system
+Real-world integration
 🧠 Learning Outcomes
-A* path planning
-Autonomous navigation logic
-Simulation design
-Streamlit UI development
-Real-time visualization
+A* Algorithm
+AI navigation
+Simulation systems
+Streamlit UI
